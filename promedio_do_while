@@ -1,0 +1,36 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int i;
+	float np, p1, p2, p3, ef, nf, s;
+	char m;
+	s=0;
+	i=1;
+	do
+	{
+		cout<< "Ingrese nota practica: ";
+		cin>> np;
+		cout<< "Ingrese nota de primer parcial: ";
+		cin>> p1;
+		cout<< "Ingrese nota de segundo parcial: ";
+		cin>> p2;
+		cout<< "Ingrese nota de tercer parcial: ";
+		cin>> p3;
+		cout<< "Ingrese nota del examen final: ";
+		cin>> ef;
+		nf=(np*0.2)+(((p1+p2+p3)/3)*0.4)+(ef*0.4);
+		cout<< "El promedio es: " << nf << endl;
+		s=s+nf;
+		cout<< "Para terminar presione N " << endl;
+		cout<< "Para continuar presione una letra distinta de N" << endl;
+
+		cin>> m;
+		i=i++;
+	}
+	while (m!='N');
+	cout<< "El promedio de los estudiantes es: " << s/(i-1) << endl;
+	getch();
+}
