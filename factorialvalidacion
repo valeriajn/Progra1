@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+ using namespace std;
+
+ void main ()
+ {
+int factorial=1,i,n;
+//factorial es un acumulador de producto
+//factorial=1 inicializar el acumulador
+//i es un contador 
+//n es el numero que necesita calcular el factorial
+//validar la entrada
+	 do{
+		cout<< "Ingrese el valor de n: ";
+		cin>> n ;
+	 } while (n<0); //la condicion debe contemplar los valores incorrectos (falso)
+					// negar la condicion correcta
+	 for (i=2;i<=n;i++)
+		 factorial=factorial*i; //acumulador del producto
+	 cout<< "El factorial de " << n << " es: " << factorial<< endl;
+	 getch();
+ }
