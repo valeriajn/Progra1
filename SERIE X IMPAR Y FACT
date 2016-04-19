@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{
+	int n,i,sig;
+	float x,FACT,s;
+	s=0;
+	FACT=1;
+	sig=1;
+	cout<< "Ingrese el termino N: ";
+	cin>> n;
+	cout<< "Ingrese el valor de X: ";
+	cin>> x;
+	for(i=1;i<=n;i++)
+	{
+		if(i%2!=0)
+		{
+				s=s+sig*(pow(x,i)/FACT);
+				sig=-sig;
+		}
+		FACT=FACT*(i+1);
+	}
+	cout<< "La suma es: " << s << endl;
+	getch();
+}
