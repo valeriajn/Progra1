@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+using namespace std;
+
+void main()
+{
+	int Cod, AUX, NumPrest;
+	float TP=0,MontoE, MontoPrest;
+	string nombre;
+	cout<< "Ingrese el codigo del empleado: ";
+	cin>> Cod;
+	while (Cod!=-999)
+	{
+		AUX=Cod;
+		MontoE=0;
+		while(AUX==Cod)
+		{
+			cout<< "Ingrese los datos adicionales: ";
+			cin >> nombre;
+			cin>> NumPrest;
+			cin>> MontoPrest;
+			MontoE=MontoE + MontoPrest;
+			cout<< "Ingrese el codido del empleado: ";
+			cin>> Cod;
+		}
+		cout<< " Empleado " << AUX << " MontoPrest=" << MontoE<< endl;
+		TP=TP + MontoE;
+	}
+	cout<< "El total prestado es: " <<TP << endl;
+	getch();
+}
+		
