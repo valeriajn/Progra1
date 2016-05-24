@@ -26,6 +26,8 @@ void main()
 			break;
 		case 2: mostrar(vec,n);
 			break;
+		case 0: cout<<"FIN PROGRAMA"<< endl;
+			break;
 		default: cout<<"opcion invalida, digite otro numero";
 			break;
 		}
